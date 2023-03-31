@@ -1,21 +1,32 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* GENERAL */
 img {
     max-width: 100%;
 }
 
+/* VARs */
+:root {
+    --sidebar-width: 35%;
+    --sidebar-min-width: 270px;
+}
+
+/* IDs */
 #search-bar {
     width: 100%;
+    height: 2rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-style: oblique ;
 }
 
-.bars-height {
-    height: 3rem;
-}
-
+/* UTILITIY */
 .flex {
     display: flex;
 }
@@ -25,18 +36,67 @@ img {
 }
 
 .sidebar-left {
-    width: 30%;
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-min-width);
+    height: 100%;
+}
+
+.userbar {
+    align-items: center;
+}
+
+.bars-height {
+    height: 3rem;
+}
+
+.sidebar-left-padding {
+    padding: 0 20px 0 20px;
+}
+
+/* CLASSES */
+.wrapper-background{
+    z-index: -9999;
+    width: 100%;
+    height: 100vh;
 }
 
 .notification-bar {
     background-color: aqua;
+    justify-content: center;
+}
+
+.sidebar-left-top {
+    justify-content: space-between;
+}
+
+.left-top-icons {
+    width: 3.8rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .notification-anchor {
     font-size: 0.75rem;
 }
 
-.bars-height {
+.searchbar {
     width: 100%;
     align-items: center;
+}
+
+.contact {
+    justify-content: center;
+}
+
+.contact-subtitle {
+    margin-top: 3px;
+    font-size: 0.6rem;
+    color: #aaaaaa;
+}
+
+.content {
+    height: 100%;
+    overflow-y: auto;
+    width: calc(100% - var(--sidebar-width));
+    background-color: #ffd8c9;
 }

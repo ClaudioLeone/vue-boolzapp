@@ -11,32 +11,39 @@
 </head>
 <body>
     <div id="app">
-        <div class="background">
+        <div class="wrapper-background flex">
             <div class="sidebar-left">
-                <div class="sidebar-left-top flex bars-height">
-                    <div>
+                <div class="sidebar-left-top flex bars-height sidebar-left-padding">
+                    <div class="userbar flex">
                         <h5>Sofia</h5>
                     </div>
     
-                    <div class="left-top-icons">
-                        
+                    <div class="left-top-icons flex">
+                        <a href="#"><i class="fa-solid fa-circle-notch" style="color: #b0b0b0;"></i></a>
+                        <a href="#"><i class="fa-solid fa-message" style="color: #b0b0b0;"></i></a>
+                        <a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: #b0b0b0;"></i></a>
                     </div>
                 </div>
     
-                <div class="notification-bar bars-height">
-                    <div class="flex d-column">
-                        <h5>Ricevi notifiche di nuovi messaggi</h5>
-                        <a class="notification-anchor" href="#">Attiva notifiche desktop</a>
-                    </div>
+                <div class="notification-bar bars-height sidebar-left-padding flex d-column">
+                    <h5>Ricevi notifiche di nuovi messaggi</h5>
+                    <a class="notification-anchor" href="#">Attiva notifiche desktop</a>
                 </div>
 
-                <div class="searchbar bars-height flex">
+                <div class="searchbar bars-height flex sidebar-left-padding">
                     <input type="search" name="search-bar" id="search-bar" placeholder="Cerca o inizia una nuova chat">
+                </div>
+
+                <div class="contacts-col sidebar-left-padding">
+                    <div class="contact flex d-column bars-height">
+                        <h5 class="contact-name">Mimmo de Lillis</h5>
+                        <p class="contact-subtitle">Ultimo accesso il 7/7 alle 07:07</p>
+                    </div>
                 </div>
             </div>
             
             <div class="content">
-    
+                <div>GINO</div>
             </div>
         </div>
     </div>
