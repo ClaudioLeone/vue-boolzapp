@@ -7,3 +7,36 @@
 img {
     max-width: 100%;
 }
+
+#search-bar {
+    width: 100%;
+}
+
+.bars-height {
+    height: 3rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.d-column {
+    flex-direction: column;
+}
+
+.sidebar-left {
+    width: 30%;
+}
+
+.notification-bar {
+    background-color: aqua;
+}
+
+.notification-anchor {
+    font-size: 0.75rem;
+}
+
+.bars-height {
+    width: 100%;
+    align-items: center;
+}
