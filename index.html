@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/style.css">
     <title>Boolzapp</title>
@@ -22,7 +25,7 @@
                             <h5>Sofia</h5>
                         </div>
         
-                        <div class="left-top-icons flex">
+                        <div class="top-icons flex">
                             <a href="#"><i class="fa-solid fa-circle-notch" style="color: #b0b0b0;"></i></a>
                             <a href="#"><i class="fa-solid fa-message" style="color: #b0b0b0;"></i></a>
                             <a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: #b0b0b0;"></i></a>
@@ -34,26 +37,77 @@
                         <a class="notification-anchor" href="#">Attiva notifiche desktop</a>
                     </div>
     
-                    <div class="searchbar bars-height flex sidebar-left-padding">
+                    <div class="searchbar bars-height sidebar-left-padding flex">
                         <input type="search" name="search-bar" id="search-bar" placeholder="Cerca o inizia una nuova chat">
                     </div>
     
-                    <div class="contacts-col sidebar-left-padding">
-                        <div class="contact flex d-column bars-height">
+                    <div class="contacts-col">
+                        <div class="sel-contact sidebar-left-padding flex d-column bars-height">
                             <h5 class="contact-name">Mimmo de Lillis</h5>
                             <p class="contact-subtitle">Ultimo accesso il 7/7 alle 07:07</p>
+                        </div>
+
+                        <div class="contact sidebar-left-padding flex d-column bars-height">
+                            <h5 class="contact-name">Gino Paoli</h5>
+                            <p class="contact-subtitle">Ultimo accesso anni fa</p>
+                        </div>
+
+                        <div class="contact sidebar-left-padding flex d-column bars-height">
+                            <h5 class="contact-name">Tristo Mietitrebbia</h5>
+                            <p class="contact-subtitle">Ultimo accesso alle 00:00</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="content-container">
-                    <div class="content-top-bar bars-height"></div>
+                    <div class="content-top-bar bars-height flex">
+                        <div class="flex">
+                            <img class="contacts-avatar" src="img/avatar_1.jpg" alt="avt_1">
 
-                    <div class="content">
-                        <div>GINO</div>
+                            <div class="top-contact-container flex d-column">
+                                <h5>Mimmo De Lillis</h5>
+                                <p class="top-user-time">Ultimo accesso il 7/7 alle 07:07</p>
+                            </div>
+                        </div>
+                        
+                        <div class="top-icons flex">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #b0b0b0;"></i></a>
+                            <a href="#"><i class="fa-solid fa-paperclip" style="color: #b0b0b0;"></i></a>
+                            <a href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: #b0b0b0;"></i></a>
+
+                        </div>
                     </div>
 
-                    <div class="content-bottom-bar bars-height"></div>
+                    <div class="content flex d-column">
+                        <div class="received-row flex d-column">
+                            <p>Hai portato a spasso il cane?</p>
+                            <p class="msg-time">07:07</p>
+                        </div>
+
+                        <div class="received-row flex d-column">
+                            <p>Hai steso i panni?</p>
+                            <p class="msg-time">07:07</p>
+                        </div>
+
+                        <div class="sent-row flex d-column">
+                            <p>NO</p>
+                            <p class="msg-time">12:02</p>
+                        </div>                      
+                    </div>
+
+                    <div class="content-bottom-bar bars-height flex">
+                        <div>
+                            <i class="fa-regular fa-face-smile" style="color: #b0b0b0;"></i>
+                        </div>
+
+                        <div>
+                            <input class="bottom-srcbar" type="text" placeholder="Scrivi un messaggio">
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-microphone" style="color: #b0b0b0;"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
