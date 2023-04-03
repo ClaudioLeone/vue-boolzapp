@@ -22,6 +22,7 @@
                 <div class="sidebar-left">
                     <div class="sidebar-left-top flex bars-height sidebar-left-padding">
                         <div class="userbar flex">
+                            <img class="contacts-avatar" src="img/avatar_io.jpg" alt="avt_io">
                             <h5>Sofia</h5>
                         </div>
         
@@ -32,9 +33,14 @@
                         </div>
                     </div>
         
-                    <div class="notification-bar bars-height sidebar-left-padding flex d-column">
-                        <h5>Ricevi notifiche di nuovi messaggi</h5>
-                        <a class="notification-anchor" href="#">Attiva notifiche desktop</a>
+                    <div class="notification-bar bars-height sidebar-left-padding flex">
+                        <div class="notification-icon-container flex">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="notification-info-container flex d-column">
+                            <h6>Ricevi notifiche di nuovi messaggi</h6>
+                            <a class="notification-anchor" href="#">Attiva notifiche desktop</a>
+                        </div>
                     </div>
     
                     <div class="searchbar bars-height sidebar-left-padding flex">
@@ -42,19 +48,13 @@
                     </div>
     
                     <div class="contacts-col">
-                        <div class="sel-contact sidebar-left-padding flex d-column bars-height">
-                            <h5 class="contact-name">Mimmo de Lillis</h5>
-                            <p class="contact-subtitle">Ultimo accesso il 7/7 alle 07:07</p>
-                        </div>
-
-                        <div class="contact sidebar-left-padding flex d-column bars-height">
-                            <h5 class="contact-name">Gino Paoli</h5>
-                            <p class="contact-subtitle">Ultimo accesso anni fa</p>
-                        </div>
-
-                        <div class="contact sidebar-left-padding flex d-column bars-height">
-                            <h5 class="contact-name">Tristo Mietitrebbia</h5>
-                            <p class="contact-subtitle">Ultimo accesso alle 00:00</p>
+                        <div class="sel-contact sidebar-left-padding flex bars-height">
+                            <img class="contacts-avatar" src="img/avatar_1.jpg" alt="avt_1">
+                            <div class="contact-info flex d-column">
+                                <h5 class="contact-name">Mimmo de Lillis</h5>
+                                <p class="contact-subtitle">Ultimo messaggio</p>
+                            </div>
+                            <span class="contact-hour">12:00</span>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <i class="fa-regular fa-face-smile" style="color: #b0b0b0;"></i>
                         </div>
 
-                        <div>
+                        <div class="bottom-srcbar-container">
                             <input class="bottom-srcbar" type="text" placeholder="Scrivi un messaggio">
                         </div>
 
