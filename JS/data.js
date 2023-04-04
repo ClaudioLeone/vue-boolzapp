@@ -206,7 +206,7 @@ createApp ({
                 status: 'received'
             }
             this.contacts[this.activeIndex].messages.push(msgToReceive);
-            getIndex = this.receiveNewMsg()
+            getIndex = this.activeIndex;
         } 
     }
 }).mount("#app");
