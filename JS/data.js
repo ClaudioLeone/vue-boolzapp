@@ -5,6 +5,7 @@ createApp ({
         return {
             activeIndex: 0,
             newMsg: "",
+            search: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -171,6 +172,12 @@ createApp ({
         }
     },
 
+    computed: {
+        filterContacts() {
+            return this.contacts.filter((contactElem) => {return contactElem.name.toLowerCase().includes(this.search.toLowerCase())});
+        }
+    },
+
     methods: {
         activeIndexUpdate(newIndex) {
             this.activeIndex = newIndex;
@@ -182,21 +189,24 @@ createApp ({
                     message: this.newMsg,
                     status: 'sent'
                 };
+                
                 this.contacts[this.activeIndex].messages.push(msgToAdd);
+                const getIndex = this.activeIndex;
                 this.newMsg = "";
 
                 setTimeout(() => {
-                    this.receiveNewMsg();
-                }, 2500);
+                    this.receiveNewMsg(getIndex);
+                }, 1000);
             }
         },
 
-        receiveNewMsg() {
+        receiveNewMsg(getIndex) {
             const msgToReceive = {
                 message: "Ok",
                 status: 'received'
             }
             this.contacts[this.activeIndex].messages.push(msgToReceive);
-        }
+            getIndex = this.receiveNewMsg()
+        } 
     }
 }).mount("#app");

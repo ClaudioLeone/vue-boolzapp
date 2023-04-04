@@ -45,18 +45,22 @@
                     </div>
     
                     <div class="searchbar bars-height sidebar-left-padding flex">
-                        <input type="search" name="search-bar" id="search-bar" placeholder="Cerca o inizia una nuova chat">
+                        <input v-model="search" type="search" name="search-bar" id="search-bar" placeholder="Cerca o inizia una nuova chat">
                     </div>
     
-                    <div class="contacts-col">
-                        <div class="contact-elem sidebar-left-padding flex bars-height" v-for="(contact, index) in contacts" @click="activeIndexUpdate(index)" :class="index === activeIndex ? 'sel-contact' : ''">
-                            <img class="contacts-avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="avt_1">
+                    <div v-if="filterContacts.length > 0"  class="contacts-col">
+                        <div class="contact-elem sidebar-left-padding flex bars-height" v-for="(contactElem, index) in filterContacts" @click="activeIndexUpdate(index)" :class="index === activeIndex ? 'sel-contact' : ''">
+                            <img class="contacts-avatar" :src="`img/avatar${contactElem.avatar}.jpg`" alt="avt_1">
                             <div class="contact-info flex d-column">
-                                <h5 class="contact-name">{{ contact.name }}</h5>
+                                <h5 class="contact-name">{{ contactElem.name }}</h5>
+                                
                                 <p class="contact-subtitle">Ultimo messaggio</p>
                             </div>
                             <span class="contact-hour">12:00</span>
                         </div>
+                    </div>
+                    <div v-else class="error-msg">
+                        <h3>Nessun contatto trovato</h3>
                     </div>
                 </div>
                 
