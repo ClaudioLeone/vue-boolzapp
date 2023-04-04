@@ -79,11 +79,15 @@
                     </div>
 
                     <div class="content flex d-column">
-                        <div class="received-row flex d-column">
-                            <p>Hai portato a spasso il cane?</p>
-                            <p class="msg-time">07:07</p>
+                        <div v-for="message in contacts[activeIndex].messages">
+                            <div class="flex d-column">
+                                <div class="flex d-column" :class="message.status === 'received' ? 'received-row' : 'sent-row'" class="">
+                                    <p>{{ message.message }}</p>
+                                    <p class="msg-time">07:07</p>
+                                </div>
+                            </div>
                         </div>
-
+<!-- 
                         <div class="received-row flex d-column">
                             <p>Hai steso i panni?</p>
                             <p class="msg-time">07:07</p>
@@ -92,7 +96,7 @@
                         <div class="sent-row flex d-column">
                             <p>NO</p>
                             <p class="msg-time">12:02</p>
-                        </div>                      
+                        </div>                       -->
                     </div>
 
                     <div class="content-bottom-bar bars-height flex">
