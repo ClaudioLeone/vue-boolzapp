@@ -48,10 +48,10 @@
                     </div>
     
                     <div class="contacts-col">
-                        <div class="sel-contact sidebar-left-padding flex bars-height">
-                            <img class="contacts-avatar" src="img/avatar_1.jpg" alt="avt_1">
+                        <div class="sel-contact sidebar-left-padding flex bars-height" v-for="contact in contacts">
+                            <img class="contacts-avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="avt_1">
                             <div class="contact-info flex d-column">
-                                <h5 class="contact-name">Mimmo de Lillis</h5>
+                                <h5 class="contact-name">{{ contact.name }}</h5>
                                 <p class="contact-subtitle">Ultimo messaggio</p>
                             </div>
                             <span class="contact-hour">12:00</span>
