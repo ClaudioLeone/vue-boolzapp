@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
                     </div>
     
                     <div class="contacts-col">
-                        <div class="sel-contact sidebar-left-padding flex bars-height" v-for="contact in contacts">
+                        <div class="sel-contact sidebar-left-padding flex bars-height" v-for="(contact, index) in contacts" @click="activeIndexUpdate(index)">
                             <img class="contacts-avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="avt_1">
                             <div class="contact-info flex d-column">
                                 <h5 class="contact-name">{{ contact.name }}</h5>
@@ -62,10 +62,10 @@
                 <div class="content-container">
                     <div class="content-top-bar bars-height flex">
                         <div class="flex">
-                            <img class="contacts-avatar" src="img/avatar_1.jpg" alt="avt_1">
+                            <img class="contacts-avatar" :src="`img/avatar${contacts[activeIndex].avatar}.jpg`" alt="avt_1">
 
                             <div class="top-contact-container flex d-column">
-                                <h5>Mimmo De Lillis</h5>
+                                <h5>{{contacts[activeIndex].name}}</h5>
                                 <p class="top-user-time">Ultimo accesso il 7/7 alle 07:07</p>
                             </div>
                         </div>

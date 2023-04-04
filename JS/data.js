@@ -172,8 +172,7 @@ createApp ({
 
     methods: {
         activeIndexUpdate(newIndex) {
-            this.activeIndex = new newIndex;
-            console.log(newIndex);
+            this.activeIndex = newIndex;
         }
     }
 }).mount("#app");
