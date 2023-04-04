@@ -176,13 +176,27 @@ createApp ({
             this.activeIndex = newIndex;
         },
 
-        addNewMsg() {
-            const addNewMsg = {
-                message: this.newMsg,
-                status: 'sent'
+        sendNewMsg() {
+            if (this.newMsg.length > 0) {
+                const msgToAdd = {
+                    message: this.newMsg,
+                    status: 'sent'
+                };
+                this.contacts[this.activeIndex].messages.push(msgToAdd);
+                this.newMsg = "";
+
+                setTimeout(() => {
+                    this.receiveNewMsg();
+                }, 2500);
             }
-            this.contacts[this.activeIndex].messages.push(addNewMsg);
-            this.newMsg = "";
+        },
+
+        receiveNewMsg() {
+            const msgToReceive = {
+                message: "Ok",
+                status: 'received'
+            }
+            this.contacts[this.activeIndex].messages.push(msgToReceive);
         }
     }
 }).mount("#app");
