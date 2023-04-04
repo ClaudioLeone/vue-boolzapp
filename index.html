@@ -48,7 +48,7 @@
                     </div>
     
                     <div class="contacts-col">
-                        <div class="sel-contact sidebar-left-padding flex bars-height" v-for="(contact, index) in contacts" @click="activeIndexUpdate(index)">
+                        <div class="contact-elem sidebar-left-padding flex bars-height" v-for="(contact, index) in contacts" @click="activeIndexUpdate(index)" :class="index === activeIndex ? 'sel-contact' : ''">
                             <img class="contacts-avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="avt_1">
                             <div class="contact-info flex d-column">
                                 <h5 class="contact-name">{{ contact.name }}</h5>
